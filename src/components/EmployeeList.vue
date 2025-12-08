@@ -10,7 +10,7 @@
           <td>{{ e.name }}</td>
           <td>{{ e.role }}</td>
           <td>{{ e.department }}</td>
-          <td>€{{ e.salary }}</td>
+          <td>R{{ e.salary }}</td>
           <td>{{ e.attendancePercent }}%</td>
           <td><button class="btn btn-sm btn-outline-warning text-dark" @click="select(e)">View</button></td>
         </tr>

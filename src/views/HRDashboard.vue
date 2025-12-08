@@ -28,9 +28,9 @@
 <script setup>
 import { ref } from 'vue'
 import EmployeeList from '../components/EmployeeList.vue'
-import Payroll from '../components/Payroll.vue'
+import Payroll from '../components/ThePayroll.vue'
 import TimeOff from '../components/TimeOff.vue'
-import Reports from '../components/Reports.vue'
+import Reports from '../components/TheReports.vue'
 
 const active = ref('employees')
 </script>
