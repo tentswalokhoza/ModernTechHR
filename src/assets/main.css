@@ -1,13 +1,13 @@
 @import './base.css';
 
 :root {
-  --bg: #0b0b0b;
-  --card: #121212;
-  --gold: #d4af37;
-  --muted: #bfb8a8;
+  --bg: #00652a50;
+  --card: #23975dc7;
+  --gold: hsl(0, 0%, 0%);
+  --muted: #000000;
   --accent: #f3d98b;
   --border: rgba(212,175,55,0.12);
-  --text: #f6f2ec;
+  --text: #ffffff;
 }
 
 html, body, #app {
@@ -26,7 +26,7 @@ html, body, #app {
 a { color: var(--gold); text-decoration: none }
 
 .card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  background: linear-gradient(180deg, rgba(0, 255, 187, 0.051), rgba(255, 255, 255, 0.962));
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1rem;
@@ -40,12 +40,11 @@ a { color: var(--gold); text-decoration: none }
 
 .navbar-hr {
   background: linear-gradient(90deg, rgba(212,175,55,0.06), transparent);
-  border-bottom: 1px solid rgba(212,175,55,0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .muted { color: var(--muted) }
 
-/* responsive tweaks */
 @media (min-width: 1024px) {
   #app { padding: 2rem }
 }

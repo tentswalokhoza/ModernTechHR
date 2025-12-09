@@ -33,9 +33,7 @@ const form = reactive({ username: '', password: '' })
 const error = ref('')
 
 function login() {
-  // mock authentication
   if (form.username === 'hradmin' && form.password === 'secret') {
-    // in a real app we'd set auth tokens; here just navigate
     router.push('/hr')
   } else {
     error.value = 'Invalid credentials'
@@ -45,4 +43,5 @@ function login() {
 
 <style scoped>
 .card { background: var(--card); border: 1px solid var(--border) }
+.signin-link { color: var(--accent); text-decoration: underline; cursor: pointer }
 </style>

@@ -40,4 +40,5 @@ function update(r, status){
 
 <style scoped>
 .table { background: transparent }
+
 </style>

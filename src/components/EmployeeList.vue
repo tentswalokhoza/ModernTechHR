@@ -36,6 +36,6 @@ const selected = ref(null)
 function select(emp) { selected.value = emp }
 </script>
 
-<style scoped>
+<style>
 .table { background: transparent }
 </style>

@@ -1,6 +1,6 @@
 export const employees = [
   {
-            "employeeId": 1,
+            "id": 1,
             "name": "Sibongile Nkosi",
             "position": "Software Engineer",
             "department": "Development",
@@ -9,7 +9,7 @@ export const employees = [
             "contact": "sibongile.nkosi@moderntech.com"
         },
         {
-            "employeeId": 2,
+            "id": 2,
             "name": "Lungile Moyo",
             "position": "HR Manager",
             "department": "HR",
@@ -18,7 +18,7 @@ export const employees = [
             "contact": "lungile.moyo@moderntech.com"
         },
         {
-            "employeeId": 3,
+            "id": 3,
             "name": "Thabo Molefe",
             "position": "Quality Analyst",
             "department": "QA",
@@ -27,7 +27,7 @@ export const employees = [
             "contact": "thabo.molefe@moderntech.com"
         },
         {
-            "employeeId": 4,
+            "id": 4,
             "name": "Keshav Naidoo",
             "position": "Sales Representative",
             "department": "Sales",
@@ -36,7 +36,7 @@ export const employees = [
             "contact": "keshav.naidoo@moderntech.com"
         },
         {
-            "employeeId": 5,
+            "id": 5,
             "name": "Zanele Khumalo",
             "position": "Marketing Specialist",
             "department": "Marketing",
@@ -45,7 +45,7 @@ export const employees = [
             "contact": "zanele.khumalo@moderntech.com"
         },
         {
-            "employeeId": 6,
+            "id": 6,
             "name": "Sipho Zulu",
             "position": "UI/UX Designer",
             "department": "Design",
@@ -54,7 +54,7 @@ export const employees = [
             "contact": "sipho.zulu@moderntech.com"
         },
         {
-            "employeeId": 7,
+            "id": 7,
             "name": "Naledi Moeketsi",
             "position": "DevOps Engineer",
             "department": "IT",
@@ -63,7 +63,7 @@ export const employees = [
             "contact": "naledi.moeketsi@moderntech.com"
         },
         {
-            "employeeId": 8,
+            "id": 8,
             "name": "Farai Gumbo",
             "position": "Content Strategist",
             "department": "Marketing",
@@ -72,7 +72,7 @@ export const employees = [
             "contact": "farai.gumbo@moderntech.com"
         },
         {
-            "employeeId": 9,
+            "id": 9,
             "name": "Karabo Dlamini",
             "position": "Accountant",
             "department": "Finance",
@@ -81,7 +81,7 @@ export const employees = [
             "contact": "karabo.dlamini@moderntech.com"
         },
         {
-            "employeeId": 10,
+            "id": 10,
             "name": "Fatima Patel",
             "position": "Customer Support Lead",
             "department": "Support",
@@ -92,11 +92,15 @@ export const employees = [
 ]
 
 export const timeOffRequests = [
-  { id: 1, employeeId: 2, from: '2025-12-20', to: '2025-12-24', type: 'Vacation', status: 'Pending' },
-  { id: 2, employeeId: 3, from: '2025-12-01', to: '2025-12-02', type: 'Sick', status: 'Approved' },
+  { id: 1, employeeId: 2, from: '2025-12-20', to: '2025-12-24', type: 'Emergency', status: 'Pending' },
+  { id: 2, employeeId: 3, from: '2025-12-01', to: '2025-12-02', type: 'Sick', status: 'Pending' },
+  { id: 3, employeeId: 9, from: '2025-12-20', to: '2025-12-24', type: 'Vacation', status: 'Pending' },
+  { id: 4, employeeId: 7, from: '2025-12-01', to: '2025-12-02', type: 'Sick', status: 'Pending' },
 ]
 
 export const payrollHistory = [
-  { id: 1, employeeId: 1, month: '2025-11', gross: 9000, tax: 1350, net: 7650 },
-  { id: 2, employeeId: 2, month: '2025-11', gross: 6200, tax: 930, net: 5270 },
+  { id: 1, employeeId: 2, month: '2025-11', gross: 9000, tax: 1350, net: 7650 },
+  { id: 2, employeeId: 3, month: '2025-11', gross: 6200, tax: 930, net: 5270 },
+  { id: 3, employeeId: 9, month: '2025-11', gross: 5800, tax: 870, net: 4930 },
+  { id: 4, employeeId: 7, month: '2025-11', gross: 6000, tax: 900, net: 5100 },
 ]

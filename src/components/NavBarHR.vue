@@ -8,9 +8,9 @@
 
       <div class="collapse navbar-collapse" id="navmenu">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><router-link class="nav-link" to="/">Home</router-link></li>
+          <li class="nav-item"><router-link class="nav-link" to="/">Log-in</router-link></li>
           <li class="nav-item"><router-link class="nav-link" to="/hr">HR Dashboard</router-link></li>
-          <li class="nav-item"><router-link class="nav-link" to="/login">Login</router-link></li>
+
         </ul>
       </div>
     </div>
@@ -21,7 +21,7 @@
 </script>
 
 <style scoped>
-.navbar-hr { background: linear-gradient(90deg, rgba(212,175,55,0.04), transparent); border: 1px solid rgba(212,175,55,0.06) }
+.navbar-hr { background: linear-gradient(90deg, #00652ac3, transparent); border: 1px solid rgba(0, 0, 0, 0.799) }
 .brand { color: var(--gold) }
 .nav-link { color: var(--muted) }
 .nav-link.router-link-active { color: var(--gold); font-weight:600 }
