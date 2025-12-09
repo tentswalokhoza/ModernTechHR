@@ -37,4 +37,6 @@ const active = ref('employees')
 
 <style scoped>
 .card { padding: 1rem }
+.button { min-width: 100px }
+.button + .button { margin-left: 0.5rem }
 </style>

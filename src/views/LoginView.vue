@@ -34,14 +34,26 @@ const error = ref('')
 
 function login() {
   if (form.username === 'hradmin' && form.password === 'secret') {
+    localStorage.setItem('auth', JSON.stringify({ user: 'hradmin' }))
     router.push('/hr')
   } else {
     error.value = 'Invalid credentials'
   }
 }
+
 </script>
 
 <style scoped>
 .card { background: var(--card); border: 1px solid var(--border) }
 .signin-link { color: var(--accent); text-decoration: underline; cursor: pointer }
+
+.card .btn.btn-warning[type="submit"] {
+  background: #00aeff6e;
+  color: #ffffff;
+  border: none;
+}
+.card .btn.btn-warning[type="submit"]:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
 </style>

@@ -21,8 +21,9 @@
 </script>
 
 <style scoped>
-.navbar-hr { background: linear-gradient(90deg, #00652ac3, transparent); border: 1px solid rgba(0, 0, 0, 0.799) }
+.navbar-hr { background: linear-gradient(90deg, #0088ff44, transparent); border: 1px solid rgba(0, 0, 0, 0.799) }
 .brand { color: var(--gold) }
 .nav-link { color: var(--muted) }
 .nav-link.router-link-active { color: var(--gold); font-weight:600 }
+.nav-link:hover { color: var(--gold); text-decoration: underline }
 </style>
