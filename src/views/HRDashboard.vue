@@ -8,7 +8,7 @@
     </div>
 
     <div v-if="active==='employees'" class="card">
-      <EmployeeList />
+      <EmployeeList @view-attendance-report="active='reports'" />
     </div>
 
     <div v-if="active==='payroll'" class="card">

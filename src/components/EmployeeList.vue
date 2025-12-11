@@ -32,7 +32,7 @@
           <td>{{ e.role }}</td>
           <td>{{ e.department }}</td>
           <td>R{{ e.salary }}</td>
-          <td>{{ e.attendancePercent }}%</td>
+          <td @click="emit('view-attendance-report')" class="attendance-link">{{ e.attendancePercent }}%</td>
           <td>
             <span :class="e.active ? 'text-success' : 'text-danger'">
               {{ e.active ? 'Active' : 'Inactive' }}
@@ -88,17 +88,19 @@
 <script setup>
 import { ref, computed } from 'vue'
 
+const emit = defineEmits(['view-attendance-report'])
+
 const employees = ref([
-  { id: 1, name: 'Sibongile Nkosi', role: 'Software Engineer', department: 'Development', salary: 70000, attendancePercent: 95, email: 'sibongile.nkosi@moderntech.com', startDate: '2022-01-10', active: true },
-  { id: 2, name: 'Lungile Moyo', role: 'HR Manager', department: 'HR', salary: 80000, attendancePercent: 90, email: 'lungile.moyo@moderntech.com', startDate: '2021-07-20', active: true },
-  { id: 3, name: 'Thabo Molefe', role: 'Quality Analyst', department: 'QA', salary: 55000, attendancePercent: 98, email: 'thabo.molefe@moderntech.com', startDate: '2020-03-15', active: true },
-  { id: 4, name: 'Keshav Naidoo', role: 'Sales Representative', department: 'Sales', salary: 60000, attendancePercent: 92, email: 'keshav.naidoo@moderntech.com', startDate: '2019-11-01', active: true },
-  { id: 5, name: 'Keshav Naidoo', role: 'Marketing Specialist', department: 'Marketing', salary: 58000, attendancePercent: 88, email: 'zanele.khumalo@moderntech.com', startDate: '2021-05-18', active: true },
-  { id: 6, name: 'Sipho Zulu', role: 'UI/UX Designer', department: 'Design', salary: 65000, attendancePercent: 96, email: 'sipho.zulu@moderntech.com', startDate: '2020-09-12', active: true },
-  { id: 7, name: 'Naledi Moeketsi', role: 'DevOps Engineer', department: 'IT', salary: 56000, attendancePercent: 97, email: 'naledi.moeketsi@moderntech.com', startDate: '2019-06-23', active: true },
-  { id: 8, name: 'Farai Gumbo', role: 'Content Strategist', department: 'Marketing', salary: 56000, attendancePercent: 97, email: 'farai.gumbo@moderntech.com', startDate: '2019-06-23', active: true },
-  { id: 9, name: 'Karabo Dlamini', role: 'Accountant', department: 'Finance', salary: 62000, attendancePercent: 93, email: 'karabo.dlamini@moderntech.com', startDate: '2021-08-10', active: true },
-  { id: 10, name: 'Fatima Patel', role: 'Customer Support Lead', department: 'Support', salary: 58000, attendancePercent: 93, email: 'fatima.patel@moderntech.com', startDate: '2021-08-10', active: true }
+  { id: 1, name: 'Sibongile Nkosi', role: 'Software Engineer', department: 'Development', salary: 70000, attendancePercent: 80, email: 'sibongile.nkosi@moderntech.com', startDate: '2022-01-10', active: true },
+  { id: 2, name: 'Lungile Moyo', role: 'HR Manager', department: 'HR', salary: 80000, attendancePercent: 80, email: 'lungile.moyo@moderntech.com', startDate: '2021-07-20', active: true },
+  { id: 3, name: 'Thabo Molefe', role: 'Quality Analyst', department: 'QA', salary: 55000, attendancePercent: 80, email: 'thabo.molefe@moderntech.com', startDate: '2020-03-15', active: true },
+  { id: 4, name: 'Keshav Naidoo', role: 'Sales Representative', department: 'Sales', salary: 60000, attendancePercent: 80, email: 'keshav.naidoo@moderntech.com', startDate: '2019-11-01', active: true },
+  { id: 5, name: 'Zanele Khumalo', role: 'Marketing Specialist', department: 'Marketing', salary: 58000, attendancePercent: 80, email: 'zanele.khumalo@moderntech.com', startDate: '2021-05-18', active: true },
+  { id: 6, name: 'Sipho Zulu', role: 'UI/UX Designer', department: 'Design', salary: 65000, attendancePercent: 80, email: 'sipho.zulu@moderntech.com', startDate: '2020-09-12', active: true },
+  { id: 7, name: 'Naledi Moeketsi', role: 'DevOps Engineer', department: 'IT', salary: 56000, attendancePercent: 80, email: 'naledi.moeketsi@moderntech.com', startDate: '2019-06-23', active: true },
+  { id: 8, name: 'Farai Gumbo', role: 'Content Strategist', department: 'Marketing', salary: 56000, attendancePercent: 80, email: 'farai.gumbo@moderntech.com', startDate: '2019-06-23', active: true },
+  { id: 9, name: 'Karabo Dlamini', role: 'Accountant', department: 'Finance', salary: 62000, attendancePercent: 80, email: 'karabo.dlamini@moderntech.com', startDate: '2021-08-10', active: true },
+  { id: 10, name: 'Fatima Patel', role: 'Customer Support Lead', department: 'Support', salary: 58000, attendancePercent: 80, email: 'fatima.patel@moderntech.com', startDate: '2021-08-10', active: true }
 ])
 const showingProfiles = ref(false)
 const searchQuery = ref('')
@@ -173,5 +175,14 @@ function unblockUser(emp) {
 .active-letter {
   background-color: #0681c96d !important;
   color: #1C1C1C !important;
+}
+.attendance-link {
+  cursor: pointer;
+  color: #FFD700;
+  transition: 0.2s;
+}
+.attendance-link:hover {
+  color: #FFED4E;
+  text-decoration: underline;
 }
 </style>
